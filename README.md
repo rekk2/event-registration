@@ -24,3 +24,9 @@ This is an event registration application that allows users to register names at
 
 
 3. Open your web browser and go to http://localhost:3000 to access the application.
+
+## Usage
+Registration Page: / - Users can register names at different doors.
+Stats Page: /stats-page - Displays total counts and counts by door.
+Names Page: /names - Displays all names sorted by door.
+Admin Page: /admin - Manage doors, look up names, archive event data, and export data to Excel.
