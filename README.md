@@ -27,7 +27,7 @@ This is an event registration application that allows users to register names at
 
 ## Usage
 **Registration Page:** `/` - Users can register names at different doors. <br>
-**Stats Page:** `/stats-page` - Displays total counts and counts by door. <br>
+**Stats Page:** `/stats` - Displays total counts and counts by door. <br>
 **Names Page:** `/names` - Displays all names sorted by door. <br>
 **Admin Page:** `/admin` - Manage doors, look up names, archive event data, and export data to Excel.
 
