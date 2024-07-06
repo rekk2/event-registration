@@ -1,0 +1,16 @@
+{
+  "name": "event-registration",
+  "version": "1.0.0",
+  "description": "Event registration application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "exceljs": "^4.2.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3",
+    "socket.io": "^4.0.1"
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Page</h1>
+        <h2>Manage Doors</h2>
+        <form id="create-door-form">
+            <label for="door">New Door Name:</label>
+            <input type="text" id="new-door-name" name="door" required>
+            <button type="submit">Create Door</button>
+        </form>
+        <ul id="doors-list"></ul>
+
+        <h2>Lookup Name</h2>
+        <form id="lookup-name-form">
+            <label for="name">Name:</label>
+            <input type="text" id="lookup-name" name="name" required>
+            <label>
+                <input type="radio" name="search-scope" value="current" checked> Current Event
+            </label>
+            <label>
+                <input type="radio" name="search-scope" value="all"> All Events
+            </label>
+            <button type="submit">Lookup</button>
+        </form>
+        <ul id="names-list"></ul>
+
+        <h2>Event Actions</h2>
+        <form id="archive-form">
+            <label for="event-name">Event Name:</label>
+            <input type="text" id="event-name" name="event-name" required>
+            <button type="submit">Archive Event</button>
+        </form>
+        <button id="export-data">Export Data to Excel</button>
+
+        <h2>Archived Events</h2>
+        <ul id="archives-list"></ul>
+        <div id="archive-details"></div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

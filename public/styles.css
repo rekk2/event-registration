@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 800px; /* Increased max-width for larger content */
+    width: 100%;
+    margin: 20px auto;
+    overflow-y: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#stats {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.door-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Add space between buttons */
+}
+
+.rename-button,
+.delete-button {
+    margin-left: 10px; /* Add space between buttons */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #002751;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#response {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#recent-names {
+    margin-top: 20px;
+}
+
+#recent-names ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#recent-names li {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+#names-by-door {
+    margin-top: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.names-group {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.scroll-container {
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.names-group h2 {
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+.names-group ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.names-group li {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
