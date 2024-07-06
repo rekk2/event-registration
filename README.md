@@ -18,9 +18,9 @@ This is an event registration application that allows users to register names at
 
 2. Run the setup script to install dependencies and start the application:
 
- ```bash
-chmod +x setup.sh
-./setup.sh
+    ```bash
+   chmod +x setup.sh
+   ./setup.sh
 
 
 3. Open your web browser and go to http://localhost:3000 to access the application.
