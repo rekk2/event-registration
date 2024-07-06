@@ -18,8 +18,7 @@ This is an event registration application that allows users to register names at
 
 2. Run the setup script to install dependencies and start the application:
 
-bash
-Copy code
+ ```bash
 chmod +x setup.sh
 ./setup.sh
 
