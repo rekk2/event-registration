@@ -25,10 +25,10 @@ This is an event registration application that allows users to register names at
 3.  Create .env file in root directory.
     ```Example
     PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/eventTracking
-   SESSION_SECRET=your_secret_key
-   ADMIN_USERNAME=admin
-   ADMIN_PASSWORD=password
+    MONGODB_URI=mongodb://localhost:27017/eventTracking
+    SESSION_SECRET=your_secret_key
+    ADMIN_USERNAME=admin
+    ADMIN_PASSWORD=password
 
 
 5. Open your web browser and go to http://localhost:3000 to access the application.
