@@ -109,6 +109,26 @@ function isMainAdmin(req, res, next) {
   }
 }
 
+app.delete('/users/:id', isMainAdmin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    await User.findByIdAndDelete(id);
+    res.send('User deleted');
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+// Add these routes for fetching and deleting users
+app.get('/users', isMainAdmin, async (req, res) => {
+  try {
+    const users = await User.find({});
+    res.json(users);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
 function isAdmin(req, res, next) {
   if (req.session.user && (req.session.user.role === 'admin' || req.session.user.role === 'main-admin')) {
     return next();

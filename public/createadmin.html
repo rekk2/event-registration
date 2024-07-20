@@ -8,8 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Create User</h1>
-        <form id="createUserForm" action="/createadmin" method="post">
+        <h1>Create Admin</h1>
+        <a href="/logout" class="logout-button">Logout</a>
+        <a href="/door" class="back-button">Back to Door</a>
+
+        <form id="createAdminForm">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
@@ -22,8 +25,16 @@
                 <option value="door-user">Door User</option>
             </select>
 
-            <button type="submit">Create User</button>
+            <button type="submit">Create Admin</button>
         </form>
+        <div id="response"></div>
+
+        <h2>Existing Users</h2>
+        <ul id="userList">
+            <!-- User list will be populated dynamically -->
+        </ul>
     </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="createadmin.js"></script>
 </body>
 </html>
