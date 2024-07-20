@@ -32,3 +32,4 @@ This is an event registration application that allows users to register names at
 **Admin Page:** `/admin` - Manage doors, look up names, archive event data, and export data to Excel.
 
 .
+.
