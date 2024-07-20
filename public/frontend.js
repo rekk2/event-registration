@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     updateDoorOptions();
     fetchRecentNames(document.getElementById('door').value);
+    updateStats();
+    checkUserRole();
 
     document.getElementById('registrationForm').addEventListener('submit', async function(event) {
         event.preventDefault();
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('name').value = '';
 
         fetchRecentNames(door);
+        updateStats();
     });
 
     document.getElementById('door').addEventListener('change', function() {
@@ -57,4 +60,45 @@ async function updateDoorOptions() {
         option.textContent = door.door;
         doorSelect.appendChild(option);
     });
+}
+
+async function updateStats() {
+    const response = await fetch('/stats-data');
+    const data = await response.json();
+
+    document.getElementById('totalCount').textContent = data.totalCount;
+    const doorCountsList = document.getElementById('doorCounts');
+    doorCountsList.innerHTML = '';
+
+    for (const [door, count] of Object.entries(data.doorCounts)) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${door}: ${count}`;
+        doorCountsList.appendChild(listItem);
+    }
+}
+
+const socket = io();
+
+socket.on('statsUpdate', (data) => {
+    document.getElementById('totalCount').textContent = data.totalCount;
+    const doorCountsList = document.getElementById('doorCounts');
+    doorCountsList.innerHTML = '';
+
+    for (const [door, count] of Object.entries(data.doorCounts)) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${door}: ${count}`;
+        doorCountsList.appendChild(listItem);
+    }
+});
+
+async function checkUserRole() {
+    const response = await fetch('/user-role');
+    const data = await response.json();
+
+    if (data.role === 'admin') {
+        document.querySelector('.admin-button').style.display = 'block';
+    } else if (data.role === 'main-admin') {
+        document.querySelector('.admin-button').style.display = 'block';
+        document.querySelector('.createadmin-button').style.display = 'block';
+    }
 }

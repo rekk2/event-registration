@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Stats Section -->
+        <div class="stats-container">
+            <div id="stats">
+                <p>Total Count: <span id="totalCount">0</span></p>
+                <ul id="doorCounts">
+                    <!-- Door counts will be inserted here -->
+                </ul>
+            </div>
+            <div class="button-group">
+                <a href="/admin" class="admin-button" style="display: none;">Admin</a>
+                <a href="/createadmin" class="createadmin-button" style="display: none;">Create Admin</a>
+                <a href="/logout" class="logout-button">Logout</a>
+            </div>
+        </div>
+
+        <h1>Event Registration</h1>
+
+        <form id="registrationForm">
+            <label for="door">Door:</label>
+            <select id="door" name="door" required>
+                <!-- Doors will be populated dynamically -->
+            </select>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="response"></div>
+        <div id="recent-names">
+            <h2>Recent Names for Door <span id="selected-door">A</span></h2>
+            <ul id="names-list">
+                <!-- Recent names will be inserted here -->
+            </ul>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="frontend.js"></script>
+</body>
+</html>

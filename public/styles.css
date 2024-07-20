@@ -21,8 +21,40 @@ h1 {
     text-align: center;
 }
 
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 #stats {
+    text-align: left;
+    flex: 1 1 100%; /* Ensure it takes full width on smaller screens */
+}
+
+#stats p {
+    margin: 0;
+}
+
+#doorCounts {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0; /* Remove gaps between items */
+    margin-top: 10px;
+}
+
+#doorCounts li {
+    flex: 1 1 33.333%; /* Ensure three items per row */
     text-align: center;
+    margin-bottom: 5px;
 }
 
 ul {
@@ -136,4 +168,54 @@ button:hover {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 3px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    margin-left: auto;
+}
+
+.logout-button,
+.admin-button,
+.createadmin-button {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.logout-button:hover,
+.admin-button:hover,
+.createadmin-button:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .stats-container {
+        flex-direction: row;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #stats {
+        text-align: left;
+    }
+
+    #stats p, #doorCounts li {
+        font-size: 12px;
+    }
+
+    #doorCounts li {
+        flex: 1 1 33.333%; /* Ensure three items per row */
+        text-align: center;
+        margin-bottom: 5px;
+    }
 }
