@@ -12,7 +12,7 @@ This is an event registration application that allows users to register names at
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/event-registration.git
+    git clone https://github.com/rekk2/event-registration.git
     cd event-registration
     ```
 
